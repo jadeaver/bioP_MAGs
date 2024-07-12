@@ -8,8 +8,6 @@
 #BSUB -o out.%J
 #BSUB -e err.%J
 
-module load conda
-
 conda activate /usr/local/usrapps/n2fix/jdeaver/flye-2.9.4
 
 set dir = /share/n2fix/jdeaver/metagenomes/long-read/4.0_filtered-fq

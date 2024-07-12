@@ -7,8 +7,6 @@
 #BSUB -o out.%J
 #BSUB -e err.%J
 
-module load conda
-
 conda activate /usr/local/usrapps/n2fix/jdeaver/fastqc-0.12.1
 
 fastqc -t 8 -o 2.0_QC/fastp 3.0_fastp/*.fastq.gz

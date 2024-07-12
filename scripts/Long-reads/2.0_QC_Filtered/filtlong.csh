@@ -1,4 +1,4 @@
-#!/bin/tcsh
+nce#!/bin/tcsh
 
 #BSUB -n 4
 #BSUB -W 4:00

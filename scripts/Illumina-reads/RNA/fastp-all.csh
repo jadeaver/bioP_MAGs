@@ -7,8 +7,6 @@
 #BSUB -o out.%J
 #BSUB -e err.%J
 
-module load conda
-
 conda activate /usr/local/usrapps/n2fix/jdeaver/fastp
 
 set input_folder = /share/n2fix/jdeaver/metatranscriptomes/1.0_raw-data

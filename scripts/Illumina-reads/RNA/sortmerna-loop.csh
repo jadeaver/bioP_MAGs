@@ -7,8 +7,6 @@
 #BSUB -o out.%J
 #BSUB -e err.%J
 
-module load conda
-
 conda activate /usr/local/usrapps/n2fix/jdeaver/sortmerna-4.3.7
 
 set input_folder = /share/n2fix/jdeaver/metatranscriptomes/3.0_fastp
