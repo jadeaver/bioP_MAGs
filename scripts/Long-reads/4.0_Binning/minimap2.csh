@@ -17,7 +17,7 @@ set asmbl_parent_dir = "/share/n2fix/jdeaver/metagenomes/long-read/6.1_polished/
 set map_dir = "/share/n2fix/jdeaver/metagenomes/long-read/6.0_mapping/on_polished/ratatosk/SR"
 
 set reads = (B1_D4 B2_D1 B2_D2 B2_D3 B2_D4 B3_D1 B3_D2 B3_D3)
-set asmbl_dirs = (B1_D4 B2_D1 B2_D2 B2_D3 B2_D4 B3_D1 B3_D2 B3_D3 co-assembly)
+set asmbl_dirs = (B1_D4 B2_D1 B2_D2 B2_D3 B2_D4 B3_D1 B3_D2 B3_D3 co-assembly D1 D2 D3 D4)
 set asmbl_name = "assembly.fasta"
 
 foreach read ($reads)
