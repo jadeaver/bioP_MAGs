@@ -7,7 +7,7 @@ A brief description of each step is included below. Most bioinformatic analyses 
 
 ## Sequencing
 
-Both short and long read sequencing was performed. Short read sequencing was performed on an Illumina NovaSeqX (150-bp PE sequecing). Long read sequencing was performed on a MinION Mk1C device with a R14 FLO-MIN114 flow cell following library preparation with R14 chemistries (SQK-NBD114).
+Both short and long read sequencing was performed. Short read sequencing was performed on an Illumina NovaSeqX Plus 10B (150-bp PE sequecing). Long read sequencing was performed on a MinION Mk1C device with a R14 FLO-MIN114 flow cell following library preparation with R14 chemistries (SQK-NBD114).
 
 ## Quality control & filtering 
 
