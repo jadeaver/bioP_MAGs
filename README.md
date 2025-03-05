@@ -1,5 +1,5 @@
 # Bio-P MAGs Project
-Jessica Deaver, Updated: 27 September 2024
+Jessica Deaver, Updated: 5 March 2025
 
 The purpose of this project is to recover high quality polyphosphate accumulating organism (PAO) metagenome-assembled genomes (MAGs) from a full-scale biological nutrient removal process. 
 
@@ -27,14 +27,19 @@ I mapped both short and long reads to each assembly using [minimap2] (https://gi
 
 ## Bin Assessment
 
-The depreplicated, best representative bins were evaluated with [checkM] (https://ecogenomics.github.io/CheckM/) and assigned taxonomy based on GTDB classifications. I ran the `classify_wf` included in [GTDB-Tk] (https://ecogenomics.github.io/GTDBTk/commands/classify_wf.html). Bins identified as known PAOs or tentative PAOs (based on NCBI taxonomy of the closest reference genome) were selected for further investigation. There were 8 total bins, 4 with completion > 90% and redundancy < 5%, and 4 with completion > 75% and redundancy < 5%. These bins were visualised with [Anvi'o] (https://anvio.org/) to confirm even coverage. 
+The depreplicated, best representative bins were evaluated with [checkM] (https://ecogenomics.github.io/CheckM/) and assigned taxonomy based on GTDB classifications. I ran the `classify_wf` included in [GTDB-Tk] (https://ecogenomics.github.io/GTDBTk/commands/classify_wf.html). Bins identified as known PAOs or tentative PAOs (based on NCBI taxonomy of the closest reference genome) were selected for further investigation. There were 7 tentative PAO bins, 3 with completion > 90% and redundancy < 5%, and 4 with completion > 75% and redundancy < 5%. These bins were visualised with [Anvi'o] (https://anvio.org/) to confirm even coverage. 
 
-[CoverM] (https://wwood.github.io/CoverM/coverm-genome.html#coverage-calculation-options) was used to estimate coverage and relative abundance of all dereplicated bins and the unmapped read percentage using short reads mapped to the MAGs.
+[CoverM] (https://wwood.github.io/CoverM/coverm-genome.html#coverage-calculation-options) was used to estimate coverage and relative abundance of all dereplicated bins and the unmapped read percentage using short reads mapped to the MAGs. [SingleM] (https://wwood.github.io/singlem/) was used to profile the metagenomes, estimate relative abundances, and estimate the binned portion of the community as well. The advantage of SingleM is that operates on raw short read metagenomes to evaluate MAG assembly missed recovery of any high abundance or relevant microorganisms.
 
 
 ## Draft genome annotation
 
-I annotated the draft genomes with [bakta] (https://bakta.readthedocs.io/en/latest/index.html). One goal was to identify the rRNA and tRNA genes present because [MIMAG standards] (https://www.nature.com/articles/nbt.3893) specify that high quality draft genomes have 5S, 23S, and 16S rRNA and > 18 tRNA genes present. The four highest completion tentative PAO bins met these requirements to be considered high-quality draft genomes. The rRNA genes were missing in 2/4 of the lower completion draft genomes. All 4 of those genomes are still considered medium-quality draft genomes.
+I annotated the draft genomes with [bakta] (https://bakta.readthedocs.io/en/latest/index.html). One goal was to identify the rRNA and tRNA genes present because [MIMAG standards] (https://www.nature.com/articles/nbt.3893) specify that high quality draft genomes have 5S, 23S, and 16S rRNA and > 18 tRNA genes present. The three highest completion tentative PAO bins met these requirements to be considered high-quality draft genomes. The rRNA genes were missing in 2/4 of the lower completion draft genomes. All 4 of those genomes are still considered medium-quality draft genomes.
+
+## Phylogenomic analyses
+
+To compare *Ca Accumulibacter* and *Azonexus* MAGs to established reference genomes, I performed average nucleotide identity (ANI) analyses using [FastANI] (https://github.com/ParBLiSS/FastANI) and created phylogenomic trees using  [GToTree] (https://github.com/AstrobioMike/GToTree). Trees were visualized and edited with [iTOL] (https://itol.embl.de/upload.cgi). *Ca. Accumulibacter* reference genomes were from [Petriglieri et al. (2022)] (https://doi.org/10.1128/msystems.00016-22) and [Stewart et al. (2024)] (https://doi.org/10.1128/msystems.01188-23). *Azonexus* reference genomes were species representatives as identified on [GTDB] (https://gtdb.ecogenomic.org/) recovered from activated sludge/wastewater samples.
+
 
 
 
